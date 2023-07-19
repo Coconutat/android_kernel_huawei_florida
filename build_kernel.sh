@@ -34,7 +34,7 @@ date="$(date +%Y.%m.%d-%I:%M)"
 
 #构建内核部分
 echo "***Building Kernel...***"
-make ARCH=arm64 O=out $EV merge_hi6250_mod_defconfig
+make ARCH=arm64 O=out $EV merge_hi6250_ksu_defconfig
 # 定义编译线程数
 make ARCH=arm64 O=out $EV -j256 2>&1 | tee kernel_log-${date}.txt
 
